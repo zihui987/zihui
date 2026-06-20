@@ -1,0 +1,58 @@
+# ── Runtime databases ──────────────────────────────────────────────────
+*.db
+*.db-shm
+*.db-wal
+kanban.db
+state.db
+response_store.db
+gbrain_data.db
+task_flow.db
+
+# ── Hermes runtime ─────────────────────────────────────────────────────
+.hermes/processes.json
+.hermes/gateway_state.json
+.hermes/worker_logs/
+.hermes/sessions/
+.hermes/cache/
+
+# ── Agent runtime ──────────────────────────────────────────────────────
+.agents/*/runtime/
+.agents/*/cache/
+
+# ── Logs ───────────────────────────────────────────────────────────────
+logs/
+*.log
+
+# ── Python ─────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+.eggs/
+*.egg-info/
+dist/
+build/
+
+# ── System ─────────────────────────────────────────────────────────────
+Thumbs.db
+.DS_Store
+Desktop.ini
+*.bak
+*.swp
+*.tmp
+
+# ── OS / IDE ───────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swo
+*.swn
+
+# ── Temp / cache ───────────────────────────────────────────────────────
+.cache/
+tmp/
+
+# ── Agent sessions & runtime (not backup content) ──────────────────────
+.agents/*/sessions/
+.agents/*/agent/.openclaw/
+
+# ── Node ───────────────────────────────────────────────────────────────
+node_modules/

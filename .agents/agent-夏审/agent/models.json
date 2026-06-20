@@ -1,0 +1,68 @@
+{
+  "providers": {
+    "qclaw": {
+      "baseUrl": "http://127.0.0.1:19000/proxy/llm",
+      "apiKey": "__QCLAW_AUTH_GATEWAY_MANAGED__",
+      "api": "openai-completions",
+      "models": [
+        {
+          "id": "modelroute",
+          "name": "modelroute",
+          "input": [
+            "text",
+            "image"
+          ],
+          "reasoning": false,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 200000,
+          "maxTokens": 8192,
+          "api": "openai-completions"
+        }
+      ]
+    },
+    "deepseek": {
+      "baseUrl": "https://api.deepseek.com/",
+      "apiKey": "sk-74ef688e3ca04267b0930f0e0e767d27",
+      "api": "openai-completions",
+      "models": [
+        {
+          "id": "deepseek-chat",
+          "name": "deepseek-chat"
+        }
+      ]
+    },
+    "hermes": {
+      "baseUrl": "http://127.0.0.1:17772/v1",
+      "apiKey": "no-key-needed",
+      "api": "openai-completions",
+      "models": [
+        {
+          "id": "deepseek-chat",
+          "name": "deepseek-chat",
+          "input": [
+            "text"
+          ]
+        }
+      ]
+    },
+    "hermes-wsl": {
+      "baseUrl": "http://localhost:8765/v1",
+      "apiKey": "dummy",
+      "api": "openai-completions",
+      "models": [
+        {
+          "id": "hermes-wsl",
+          "name": "Hermes WSL",
+          "input": [
+            "text"
+          ]
+        }
+      ]
+    }
+  }
+}

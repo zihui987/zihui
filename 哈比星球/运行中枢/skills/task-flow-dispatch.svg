@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 820" font-family="'Microsoft YaHei','PingFang SC','Noto Sans SC',sans-serif">
+  <defs>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#059669"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#DC2626"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2563EB"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1100" height="820" fill="#FAFAFA" rx="8"/>
+
+  <!-- Title -->
+  <text x="550" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1F2937">Hermes 任务派发流程（两岗位架构）</text>
+
+  <!-- ===== 核心执掌人层 ===== -->
+  <rect x="300" y="60" width="500" height="100" rx="12" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+  <text x="550" y="98" text-anchor="middle" font-size="20" font-weight="bold" fill="#92400E">夏夏（核心执掌人 / 繁花&amp;刺猬）</text>
+  <text x="550" y="122" text-anchor="middle" font-size="13" fill="#B45309">聆听 · 决策 · 委派 · 亲自执行 · 收回接管</text>
+  <text x="550" y="142" text-anchor="middle" font-size="12" fill="#D97706">╰─ 核心执掌人 · 拥有者和指挥者 ─╯</text>
+
+  <!-- Arrow: 夏夏 → 夏仁 (direct handoff) -->
+  <line x1="420" y1="162" x2="280" y2="228" stroke="#2563EB" stroke-width="2" marker-end="url(#arrowBlue)" stroke-dasharray="6,3"/>
+  <text x="300" y="195" text-anchor="middle" font-size="11" fill="#2563EB">handoff_task</text>
+
+  <!-- Arrow: 夏夏 → 夏审 (direct handoff) -->
+  <line x1="680" y1="162" x2="820" y2="228" stroke="#2563EB" stroke-width="2" marker-end="url(#arrowBlue)" stroke-dasharray="6,3"/>
+  <text x="800" y="195" text-anchor="middle" font-size="11" fill="#2563EB">handoff_task</text>
+
+  <!-- ===== 执行层 ===== -->
+  <text x="55" y="260" text-anchor="middle" font-size="14" font-weight="bold" fill="#4B5563" transform="rotate(-90,55,390)">执行层</text>
+
+  <!-- 夏仁泳道 -->
+  <rect x="70" y="230" width="370" height="340" rx="8" fill="none" stroke="#93C5FD" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <rect x="70" y="230" width="370" height="36" rx="8" fill="#DBEAFE"/>
+  <text x="255" y="254" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E40AF">夏仁（执行岗）</text>
+
+  <!-- 夏审泳道 -->
+  <rect x="660" y="230" width="370" height="340" rx="8" fill="none" stroke="#A7F3D0" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <rect x="660" y="230" width="370" height="36" rx="8" fill="#D1FAE5"/>
+  <text x="845" y="254" text-anchor="middle" font-size="14" font-weight="bold" fill="#065F46">夏审（审核岗）</text>
+
+  <!-- ===== 状态节点 ===== -->
+
+  <!-- 夏仁侧：assigned -->
+  <rect x="120" y="290" width="270" height="44" rx="8" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="255" y="310" text-anchor="middle" font-size="13" font-weight="bold" fill="#1D4ED8">assigned</text>
+  <text x="255" y="326" text-anchor="middle" font-size="11" fill="#6B7280">夏夏直接指派任务</text>
+
+  <!-- 夏仁侧：执行 -->
+  <rect x="140" y="360" width="230" height="44" rx="8" fill="#F0FDF4" stroke="#22C55E" stroke-width="1.5"/>
+  <text x="255" y="380" text-anchor="middle" font-size="13" font-weight="bold" fill="#15803D">执行</text>
+  <text x="255" y="396" text-anchor="middle" font-size="11" fill="#6B7280">调用工具完成任务</text>
+
+  <!-- 夏仁侧：in_review -->
+  <rect x="120" y="430" width="270" height="44" rx="8" fill="#FFF7ED" stroke="#F97316" stroke-width="1.5"/>
+  <text x="255" y="450" text-anchor="middle" font-size="13" font-weight="bold" fill="#C2410C">in_review</text>
+  <text x="255" y="466" text-anchor="middle" font-size="11" fill="#6B7280">提交复核申请</text>
+
+  <!-- 夏审侧：in_review -->
+  <rect x="710" y="290" width="270" height="44" rx="8" fill="#FFF7ED" stroke="#F97316" stroke-width="1.5"/>
+  <text x="845" y="310" text-anchor="middle" font-size="13" font-weight="bold" fill="#C2410C">in_review</text>
+  <text x="845" y="326" text-anchor="middle" font-size="11" fill="#6B7280">接收益审复核请求</text>
+
+  <!-- 夏审侧：复核 -->
+  <rect x="730" y="360" width="230" height="44" rx="8" fill="#F0FDF4" stroke="#22C55E" stroke-width="1.5"/>
+  <text x="845" y="380" text-anchor="middle" font-size="13" font-weight="bold" fill="#15803D">复核审查</text>
+  <text x="845" y="396" text-anchor="middle" font-size="11" fill="#6B7280">对照验收标准逐项检查</text>
+
+  <!-- 夏审侧：通过/退回 -->
+  <rect x="710" y="430" width="270" height="64" rx="8" fill="#FEF2F2" stroke="#EF4444" stroke-width="1.5" id="decision"/>
+  <text x="845" y="452" text-anchor="middle" font-size="13" font-weight="bold" fill="#991B1B">判定</text>
+  <text x="780" y="478" text-anchor="middle" font-size="12" fill="#16A34A">通过 → completed</text>
+  <text x="910" y="478" text-anchor="middle" font-size="12" fill="#DC2626">退回 → returned</text>
+
+  <!-- completed -->
+  <rect x="120" y="510" width="270" height="44" rx="8" fill="#ECFDF5" stroke="#059669" stroke-width="2"/>
+  <text x="255" y="530" text-anchor="middle" font-size="14" font-weight="bold" fill="#047857">completed</text>
+  <text x="255" y="544" text-anchor="middle" font-size="11" fill="#6B7280">通知夏夏结果</text>
+
+  <!-- archived -->
+  <rect x="140" y="578" width="230" height="36" rx="20" fill="#F3F4F6" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="255" y="601" text-anchor="middle" font-size="13" fill="#4B5563">archived（终态）</text>
+
+  <!-- ===== 流转箭头 ===== -->
+
+  <!-- assigned → 执行 -->
+  <line x1="255" y1="334" x2="255" y2="358" stroke="#059669" stroke-width="2" marker-end="url(#arrowGreen)"/>
+
+  <!-- 执行 → in_review -->
+  <line x1="255" y1="404" x2="255" y2="428" stroke="#059669" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <text x="270" y="420" font-size="10" fill="#059669">完成 →</text>
+
+  <!-- 夏仁 in_review → 过渡到夏审 in_review -->
+  <line x1="392" y1="452" x2="708" y2="312" stroke="#2563EB" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrowBlue)"/>
+  <text x="530" y="380" text-anchor="middle" font-size="11" fill="#2563EB">system auto-routes or handoff</text>
+
+  <!-- 夏审 in_review → 复核 -->
+  <line x1="845" y1="334" x2="845" y2="358" stroke="#059669" stroke-width="2" marker-end="url(#arrowGreen)"/>
+
+  <!-- 复核 → 判定 -->
+  <line x1="845" y1="404" x2="845" y2="428" stroke="#059669" stroke-width="2" marker-end="url(#arrowGreen)"/>
+
+  <!-- 判定→通过：completed -->
+  <line x1="780" y1="462" x2="392" y2="530" stroke="#059669" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <text x="560" y="475" text-anchor="middle" font-size="11" fill="#059669">通过</text>
+  <text x="560" y="515" text-anchor="middle" font-size="11" fill="#059669">夏夏通知结果</text>
+
+  <!-- completed → archived -->
+  <line x1="255" y1="554" x2="255" y2="576" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+
+  <!-- 判定→退回：returned → 打回夏夏重指派 -->
+  <line x1="910" y1="462" x2="910" y2="520" stroke="#DC2626" stroke-width="2"/>
+  <line x1="910" y1="520" x2="550" y2="520" stroke="#DC2626" stroke-width="2"/>
+  <line x1="550" y1="520" x2="550" y2="195" stroke="#DC2626" stroke-width="2" marker-end="url(#arrowRed)"/>
+  <text x="780" y="500" text-anchor="middle" font-size="11" fill="#DC2626">退回（附问题清单）</text>
+  <text x="550" y="530" text-anchor="middle" font-size="11" fill="#DC2626">returned → 夏夏决策</text>
+
+  <!-- 夏夏重指派 → assigned -->
+  <line x1="420" y1="162" x2="392" y2="292" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowBlue)"/>
+  <text x="370" y="245" text-anchor="middle" font-size="10" fill="#3B82F6">重新指派</text>
+
+  <!-- ===== 图例 ===== -->
+  <rect x="70" y="640" width="960" height="160" rx="8" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="550" y="668" text-anchor="middle" font-size="14" font-weight="bold" fill="#374151">图例</text>
+
+  <text x="110" y="700" font-size="12" fill="#374151">■ 角色：</text>
+  <rect x="170" y="688" width="14" height="14" rx="4" fill="#FEF3C7" stroke="#D97706" stroke-width="1"/>
+  <text x="190" y="700" font-size="12" fill="#374151">夏夏（核心执掌人）</text>
+  <rect x="320" y="688" width="14" height="14" rx="4" fill="#DBEAFE" stroke="#93C5FD" stroke-width="1"/>
+  <text x="340" y="700" font-size="12" fill="#374151">夏仁（执行）</text>
+  <rect x="440" y="688" width="14" height="14" rx="4" fill="#D1FAE5" stroke="#A7F3D0" stroke-width="1"/>
+  <text x="460" y="700" font-size="12" fill="#374151">夏审（审核）</text>
+
+  <text x="110" y="730" font-size="12" fill="#374151">■ 流转：</text>
+  <line x1="170" y1="726" x2="240" y2="726" stroke="#059669" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <text x="250" y="730" font-size="12" fill="#059669">正常推进</text>
+  <line x1="350" y1="726" x2="420" y2="726" stroke="#DC2626" stroke-width="2" marker-end="url(#arrowRed)"/>
+  <text x="430" y="730" font-size="12" fill="#DC2626">退回</text>
+  <line x1="510" y1="726" x2="580" y2="726" stroke="#2563EB" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrowBlue)"/>
+  <text x="590" y="730" font-size="12" fill="#2563EB">委派 / 路由</text>
+
+  <text x="110" y="760" font-size="12" fill="#374151">■ 核心关系：夏夏 ↔ 夏仁/夏审 = 直接委派，无中间调度层。三权分立（调度/执行/审核）。</text>
+</svg>
